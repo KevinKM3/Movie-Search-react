@@ -1,6 +1,8 @@
 import React from "react";
 
-function Results({ reults }) {
+import Result from "./Result";
+
+function Results({ results }) {
   return (
     <section className="results">
       {results.map((result) => (
