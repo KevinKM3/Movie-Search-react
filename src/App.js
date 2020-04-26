@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import Search from "./components/Search";
 
+import axios from "axios";
+
 function App() {
   const [state, setState] = useState({
     s: "",
@@ -10,12 +12,22 @@ function App() {
   });
   const apiurl = "http://www.omdbapi.com/?apikey=5d12bda9";
 
+  const search = (e) => {
+    if (e.key === "Enter") {
+      axios(apiurl + "&s=" + state.s).then(({ data }) => {
+        let results = data.Search;
+        setState((prevState) => {
+          return { ...prevState, results: results };
+        });
+      });
+    }
+  };
+
   const handleInput = (e) => {
     let s = e.target.value;
     setState((prevState) => {
       return { ...prevState, s: s };
     });
-    console.log(state.s);
   };
 
   return (
@@ -24,7 +36,7 @@ function App() {
         <h1>Movie Finder Database</h1>
       </header>
       <main>
-        <Search handleInput={handleInput} />
+        <Search handleInput={handleInput} search={search} />
       </main>
     </div>
   );
