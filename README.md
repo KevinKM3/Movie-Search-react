@@ -1,5 +1,7 @@
 
-Used the OMDb API to obtain movie information.
+Movie Finder App - 
+
+React Application utilizing the OMDb API to obtain movie information.
 
 ### `yarn start`
 
