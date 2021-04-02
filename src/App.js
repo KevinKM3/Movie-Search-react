@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Kevin's Movie Finder App</h1>
+        <h1>Kevin's Movie Finder</h1>
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
