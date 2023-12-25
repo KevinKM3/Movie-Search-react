@@ -1,6 +1,6 @@
 ## app will be updated 
 
-### Movie Finder App - 
+### Movie Finder App - JS practice
 
 ## React Application utilizing the OMDb API to obtain movie information.
 
