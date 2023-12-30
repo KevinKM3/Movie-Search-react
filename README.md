@@ -1,4 +1,4 @@
-## app will be updated 
+## Still in progress - app will be updated 
 
 ### Movie Finder App - JS practice
 
